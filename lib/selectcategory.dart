@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_homepage/survey1.dart';
+import 'survey1.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
@@ -203,7 +205,10 @@ class _CategoryPageState extends State<CategoryPage> {
                   ],
                 ),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Surveys()));
+                  },
                   child: Text(
                     'VI-X',
                     style: TextStyle(color: Colors.black87, fontSize: 18.0),
