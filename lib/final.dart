@@ -74,7 +74,7 @@ class _scoreState extends State<score> {
                       Text(
                         'Your School\'s',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w900,
                             fontSize: 20,
                             letterSpacing: 1.0,
                             fontFamily: 'Raleway'),
@@ -82,10 +82,10 @@ class _scoreState extends State<score> {
                       Text(
                         'Happiness Index is :',
                         style: TextStyle(
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w900,
                             fontSize: 20,
                             letterSpacing: 1.0,
-                            fontFamily: 'Ubuntu'),
+                            fontFamily: 'Raleway'),
                       ),
                       Text(
                         '${(widget.data)}%',
@@ -94,7 +94,22 @@ class _scoreState extends State<score> {
                             fontSize: 25,
                             letterSpacing: 1.0,
                             fontFamily: 'Ubuntu'),
-                      )
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20, right: 20),
+                            child: Text(
+                              'We recommend you to :',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
+                                  fontFamily: 'Ubuntu'),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),

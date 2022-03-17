@@ -1,35 +1,42 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  return runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Color(0xFFA6F6F1),
-      appBar: AppBar(
-        leading: IconButton(
-          alignment: Alignment.centerLeft,
-          onPressed: () {},
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
-            size: 35.0,
+class ID_3 extends StatelessWidget {
+  const ID_3({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color(0xFFA6F6F1),
+        appBar: AppBar(
+          leading: IconButton(
+            alignment: Alignment.centerLeft,
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+              size: 35.0,
+            ),
           ),
-        ),
-        title: const Text(
-          "HAPPIFY",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            fontSize: 20.0,
-            fontFamily: 'Ubuntu',
+          title: const Text(
+            "HAPPIFY",
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.0,
+              fontSize: 20.0,
+              fontFamily: 'Ubuntu',
+            ),
           ),
+          centerTitle: true,
+          backgroundColor: Color(0xFFE8FFFF),
         ),
-        centerTitle: true,
-        backgroundColor: Color(0xFFE8FFFF),
+        body: ID(),
       ),
-      body: ID(),
-    ),
-  ));
+    );
+  }
 }
 
 class ID extends StatefulWidget {

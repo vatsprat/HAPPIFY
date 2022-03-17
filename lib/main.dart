@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_homepage/authentication_1.dart';
+import 'package:hackathon_homepage/authentication_2.dart';
+import 'package:hackathon_homepage/review.dart';
 
 import 'authentication.dart';
+import 'authentication_1.dart';
 
 void main() {
   return runApp(
@@ -161,14 +165,7 @@ void main() {
         ),
         appBar: AppBar(
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.rate_review_outlined,
-                color: Colors.black,
-                size: 35.0,
-              ),
-            ),
+            ICON(),
           ],
           title: const Text(
             "HAPPIFY",
@@ -370,7 +367,10 @@ class _HomepageState extends State<Homepage> {
                       elevation: 7.0,
                     ),
                     child: Image.asset('assets/icons8-teacher-64 (1).png'),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => ID_3()));
+                    },
                   ),
                 ),
               ),
@@ -428,7 +428,10 @@ class _HomepageState extends State<Homepage> {
                       elevation: 7.0,
                     ),
                     child: Image.asset('assets/icons8-parents-64.png'),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => ID_2()));
+                    },
                   ),
                 ),
               ),
@@ -468,6 +471,25 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ],
+    );
+  }
+}
+
+class ICON extends StatelessWidget {
+  const ICON({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => ID_4()));
+      },
+      icon: Icon(
+        Icons.rate_review_outlined,
+        color: Colors.black,
+        size: 35.0,
+      ),
     );
   }
 }
