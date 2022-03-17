@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_homepage/authentication.dart';
 import 'package:hackathon_homepage/survey1.dart';
 import 'survey1.dart';
+import 'authentication.dart';
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
@@ -35,7 +37,10 @@ class _CategoryState extends State<Category> {
                   Icons.arrow_back_ios,
                   color: Colors.black,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => ID_1()));
+                },
               );
             },
           ),
@@ -132,6 +137,7 @@ class _CategoryPageState extends State<CategoryPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
+                    onSurface: Colors.red,
                   ),
                 ),
               ),

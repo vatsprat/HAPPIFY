@@ -17,19 +17,140 @@ void main() {
                   color: Colors.white,
                 ),
                 child: Image.asset(
-                  'assets/8ad99972-481a-4cb4-899a-81c2bb0cee59.png',
-                  fit: BoxFit.cover,
+                  'assets/22.png',
+                  fit: BoxFit.fitHeight,
                 ),
               ),
+              SizedBox(
+                height: 15.0,
+              ),
               ListTile(
-                title: const Text('Item 1'),
+                title: Card(
+                  elevation: 8.0,
+                  color: Colors.teal.shade200,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.article_rounded,
+                      size: 35.0,
+                    ),
+                    title: Text(
+                      "Aware Yourself",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
                 onTap: () {
                   // Update the state of the app.
                   // ...
                 },
               ),
+              SizedBox(
+                height: 20.0,
+              ),
               ListTile(
-                title: const Text('Item 2'),
+                title: Card(
+                  elevation: 8.0,
+                  color: Colors.teal.shade200,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.bar_chart_rounded,
+                      size: 35.0,
+                    ),
+                    title: Text(
+                      "Statistics",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              SizedBox(
+                height: 25.0,
+              ),
+              ListTile(
+                title: Card(
+                  elevation: 8.0,
+                  color: Colors.teal.shade200,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.add_link_rounded,
+                      size: 35.0,
+                    ),
+                    title: Text(
+                      "Link School",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              SizedBox(
+                height: 25.0,
+              ),
+              ListTile(
+                title: Card(
+                  elevation: 8.0,
+                  color: Colors.teal.shade200,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.info_outline_rounded,
+                      size: 35.0,
+                    ),
+                    title: Text(
+                      "About App",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              SizedBox(
+                height: 25.0,
+              ),
+              ListTile(
+                title: Card(
+                  elevation: 8.0,
+                  color: Colors.teal.shade200,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.call,
+                      size: 35.0,
+                    ),
+                    title: Text(
+                      "Contact Us",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu',
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
                 onTap: () {
                   // Update the state of the app.
                   // ...

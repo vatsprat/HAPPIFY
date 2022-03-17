@@ -15,15 +15,6 @@ class Surveys extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color(0xFFA6F6F1),
         appBar: AppBar(
-          leading: IconButton(
-            alignment: Alignment.centerLeft,
-            onPressed: () {},
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Colors.black,
-              size: 35.0,
-            ),
-          ),
           title: const Text(
             "HAPPIFY",
             style: TextStyle(
@@ -54,12 +45,20 @@ class _Q1State extends State<Q1> {
 
   int a = 1;
   double sum = 0.0;
+  double finalscore = 0.0;
 
   double calculate(int number1) {
     sum += number1 * surveybrain.getQuestionAnswer();
-    if (surveybrain.isfinished() == true && a >= 15)
-      Navigator.push(context,
-          new MaterialPageRoute(builder: (context) => new finalpage()));
+    finalscore = (sum / 1.166) * 10;
+
+    if (surveybrain.isfinished() == true && a >= 15) {
+      Navigator.push(
+          context,
+          new MaterialPageRoute(
+              builder: (context) => new finalpage(
+                    mydata: finalscore.toStringAsPrecision(2),
+                  )));
+    }
 
     return 0;
   }
@@ -173,6 +172,7 @@ class _Q1State extends State<Q1> {
                       number1 = number;
                       calculate(number1);
                       print(sum);
+                      print(finalscore);
                       number = 1;
                     });
                   },

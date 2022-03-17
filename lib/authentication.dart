@@ -17,7 +17,9 @@ class _State extends State<ID_1> {
         appBar: AppBar(
           leading: IconButton(
             alignment: Alignment.centerLeft,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: Icon(
               Icons.arrow_back_ios,
               color: Colors.black,
