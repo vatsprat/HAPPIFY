@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_homepage/authentication.dart';
 import 'package:hackathon_homepage/survey1.dart';
-import 'survey1.dart';
+import 'package:hackathon_homepage/survey2.dart';
+import 'survey2.dart';
 import 'authentication.dart';
+
+enum Gender {Male,Female}
 
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
@@ -59,6 +62,8 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryPageState extends State<CategoryPage> {
+  Gender selectgender = Gender.Male;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -97,7 +102,9 @@ class _CategoryPageState extends State<CategoryPage> {
                   ],
                 ),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    selectgender = Gender.Male;
+                  },
                   child: Text(
                     'Male',
                     style: TextStyle(color: Colors.black87, fontSize: 18.0),
@@ -126,7 +133,9 @@ class _CategoryPageState extends State<CategoryPage> {
                   ],
                 ),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    selectgender = Gender.Female;
+                  },
                   child: Text(
                     'Female',
                     style: TextStyle(color: Colors.black87, fontSize: 18.0),
@@ -212,8 +221,15 @@ class _CategoryPageState extends State<CategoryPage> {
                 ),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Surveys()));
+                    if(selectgender == Gender.Female) {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Surveys()));
+                    }
+                    else{
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Survey2()));
+
+                    }
                   },
                   child: Text(
                     'VI-X',
