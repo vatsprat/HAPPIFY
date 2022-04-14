@@ -5,7 +5,7 @@ class SurveyBrain {
   double _finalweightage = 1.241;
   List<Question> _questionbank = [
     Question(
-        'Do the prospect of sibling/cousin studying in same school as you makes you happy?',
+        'Do the prospect of sibling/cousin studying in the same school as you makes you happy?',
         0.09),
     Question('How would you rate the safety/security of school?', 0.1),
     Question(
@@ -14,7 +14,6 @@ class SurveyBrain {
     Question(
         'Does the financial status of your family affects your day to day life in School?',
         0.1),
-
     Question(
         'Do you feel pressurized because of day to day activities at school?',
         0.065),
